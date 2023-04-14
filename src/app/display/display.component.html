@@ -1,0 +1,41 @@
+<table>
+    <tr>
+     <td colspan="3"><ng-container ><img [src]="data.StudentImage" class="stdimg" /></ng-container></td>
+     <td>
+        <tr><td>Name</td><td>{{data.StudentName}}</td></tr>
+        <tr><td>Address</td><td>{{data.Address}}</td></tr>
+        <tr><td>Date Of Birth</td><td>{{data.DOB}}</td></tr>
+    </td>
+    </tr>
+    <tr>
+        <td>Subject</td>
+        <td>Internal</td>
+        <td>External</td>
+        <td>Total</td>
+    </tr>
+    <tr>
+        <td>Hindi</td>
+        <td>{{data.Subjects.Hindi.Internal}}</td>
+        <td>{{data.Subjects.Hindi.External}}</td>
+        <td>{{((data.Subjects.Hindi.Internal)*.30)+(data.Subjects.Hindi.External)*.70}}</td>
+    </tr>
+    <tr>
+        <td>English</td>
+        <td>{{data.Subjects.English.Internal}}</td>
+        <td>{{data.Subjects.English.External}}</td>
+        <td>{{((data.Subjects.English.Internal)*.30)+(data.Subjects.English.External)*.70}}</td>
+    </tr>
+    <tr>
+        <td>Math</td>
+        <td>{{data.Subjects.Math.Internal}}</td>
+        <td>{{data.Subjects.Math.External}}</td>
+        <td>{{((data.Subjects.Math.Internal)*.30)+(data.Subjects.Math.External)*.70}}</td>
+    </tr>
+    <tr>
+        <td>Science</td>
+        <td>{{data.Subjects.Science.Internal}}</td>
+        <td>{{data.Subjects.Science.External}}</td>
+        <td>{{((data.Subjects.Science.Internal)*.30)+(data.Subjects.Science.External)*.70}}</td>
+    </tr>
+
+</table>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { St_report } from '../modules/marks';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -9,18 +9,18 @@ export class ListComponent {
 students=[
   {
     "StudentID": 1,
-    "StudentName": "Meghna"
+    "StudentName": "Rahul"
   },
   {
     "StudentID": 2,
-    "StudentName": "Reena"
+    "StudentName": "Rita"
   },
   {
     "StudentID": 3,
-    "StudentName": "Rahul"
+    "StudentName": "Rohan"
   }
 ]
-
+st_marks:St_report={StudentID:0,StudentName:"",StudentImage:"",Address:"",DOB:"",Subjects:{Hindi:{Internal:0,External:0},Science:{Internal:0,External:0},Math:{Internal:0,External:0},English:{Internal:0,External:0}}}
 marks =[
   {
     "StudentID": 1,
@@ -98,4 +98,8 @@ marks =[
     }
   }
 ]
+pass(val:string) {
+  let id=parseInt(val);
+  this.st_marks=this.marks.filter(obj=>obj.StudentID === id)[0]
+}
 }
