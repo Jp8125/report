@@ -1,3 +1,4 @@
 export interface marks{
-    Internal:number,External:number
+    Internal:number,
+    External:number
 }

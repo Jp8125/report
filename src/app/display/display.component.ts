@@ -8,5 +8,6 @@ import { Subject } from '../modules/sub';
 })
 export class DisplayComponent {
 @Input() data!:St_report
+val!:number
 
 }
